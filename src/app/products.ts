@@ -1,4 +1,4 @@
-export interface products{
+export interface productsinterface{
   sku:number;
   productname:string;
   productdescription:string;

@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { MainServices } from './main.services';
 
 @Component({
   selector: 'my-app',
@@ -6,5 +7,10 @@ import { Component } from '@angular/core';
   styleUrls: [ './app.component.css' ]
 })
 export class AppComponent  {
-  name = 'Angular';
+  name = [];
+
+  constructor(public mservice:MainServices){
+    this.name = this.mservice.getjsondata();
+
+  }
 }
