@@ -1,5 +1,25 @@
-sku:number;
-  productname:string;
-  productdescription:string;
-  productimage:string;
-  productcost:number;
+{
+  "prod": [
+    {
+      "sku":"SKU001",
+      "productname":"Elon Musk Book",
+      "productdescription":"Elon Musk books",
+      "productimage":"",
+      "productcost":"Rs.100",
+    },
+    {
+      "sku":"SKU002",
+      "productname":"Jack Ma Book",
+      "productdescription":"Jack Ma books",
+      "productimage":"",
+      "productcost":"Rs.102",
+    },
+    {
+      "sku":"SKU001",
+      "productname":"Chetan Book",
+      "productdescription":"Chetan books",
+      "productimage":"",
+      "productcost":"Rs.120",
+    },
+  ]
+}
