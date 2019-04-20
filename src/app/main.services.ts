@@ -11,6 +11,7 @@ export class MainServices{
 //private productinfo = products[];
 
 //prod: Observable <productsinterface[]>;
+  postdata;
   private urls = "https://jsonplaceholder.typicode.com/todos"; 
 
   constructor(public http:HttpClient){
@@ -19,6 +20,9 @@ export class MainServices{
 
   getjsondata():Observable<IPosts[]>{
     console.log("getjsondata working");
-    return this.http.get(this.urls);
+    return this.http.get(this.urls + '/2').subscribe(data => {
+      this.postdata = data;
+     //console.log(JSON.stringify(data)); 
+   });;
   }
 }

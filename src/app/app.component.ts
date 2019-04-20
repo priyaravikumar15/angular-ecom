@@ -9,16 +9,16 @@ import { Observable } from 'rxjs/Observable';
 })
 export class AppComponent  {
   name:any = [];
+  posts;
 
   constructor(public mservice:MainServices){
    
 }
 getnamess(){
   console.log("inside getnamess");
-   this.mservice.getjsondata().subscribe((data:any) => {
-      console.log(JSON.stringify(data));
-    });
-
+    this.name = this.mservice.getjsondata();
+     this.posts = this.mservice.postdata;
     console.log("exit getnamess");
+
 }
 }
