@@ -16,9 +16,9 @@ export class AppComponent  {
 getnamess(){
   console.log("inside getnamess");
    this.mservice.getjsondata().subscribe((data:any) => {
-       this.name = JSON.stringify(data);
+      console.log(JSON.stringify(data));
     });
-    return name;
+
     console.log("exit getnamess");
 }
 }
